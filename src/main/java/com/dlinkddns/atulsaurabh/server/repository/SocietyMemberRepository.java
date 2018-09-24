@@ -8,7 +8,6 @@ package com.dlinkddns.atulsaurabh.server.repository;
 
 import com.dlinkddns.atulsaurabh.server.entity.SocietyMember;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,8 +15,8 @@ import org.springframework.stereotype.Repository;
  * @author Atul Saurabh
  */
 
-@RepositoryRestResource(collectionResourceRel = "societymenber",path = "societymember",exported = true)
+@Repository
 public interface SocietyMemberRepository extends JpaRepository<SocietyMember, Integer>
 {
-    
+    public SocietyMember findAllByHousetypeAndHousenumber(String houseType,int houseNumber);
 }
