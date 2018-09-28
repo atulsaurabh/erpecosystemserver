@@ -19,4 +19,5 @@ import org.springframework.stereotype.Repository;
 public interface SocietyMemberRepository extends JpaRepository<SocietyMember, Integer>
 {
     public SocietyMember findAllByHousetypeAndHousenumber(String houseType,int houseNumber);
+    public SocietyMember findByUsernameAndPassphrase(String username,String passphrase);
 }
